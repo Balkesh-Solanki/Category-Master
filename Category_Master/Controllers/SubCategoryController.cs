@@ -21,10 +21,6 @@ namespace Category_Master.Controllers
         {
             return await _context.SubCategories.ToListAsync();
         }
-        //public ActionResult GetSubCategories()
-        //{
-        //    return Ok(_context.SubCategories.ToList());
-        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<SubCategoryMst>> GetSubCategoryById(int id)
@@ -37,15 +33,6 @@ namespace Category_Master.Controllers
             }
             return subCategory;
         }
-        //public ActionResult GetSubCategory(int id)
-        //{
-        //    var subCategory = _context.SubCategories.Find(id);
-        //    if (subCategory == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(subCategory);
-        //}
 
         [HttpPost]
         public async Task<ActionResult<SubCategoryMst>> AddSubCategory(SubCategoryMst subCategoryMst)
@@ -55,12 +42,6 @@ namespace Category_Master.Controllers
             return Ok(subCategoryMst);
 
         }
-        //public IActionResult AddSubCategory(SubCategoryMst subCategoryMst)
-        //{
-        //    _context.SubCategories.Add(subCategoryMst);
-        //    _context.SaveChanges();
-        //    return Ok(subCategoryMst);
-        //}
 
         [HttpPut]
         public async Task<ActionResult> UpdateSubCategory(int id, SubCategoryMst subCategoryMst)
@@ -74,17 +55,6 @@ namespace Category_Master.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        //public IActionResult UpdateSubCategory(int id, SubCategoryMst subCategoryMst)
-        //{
-        //    if(id!= subCategoryMst.Id)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(subCategoryMst).State= EntityState.Modified;
-        //    _context.SaveChanges();
-        //    return NoContent();
-        //}
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSubCategory(int id)
@@ -99,18 +69,5 @@ namespace Category_Master.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        //public IActionResult DeleteSubCategory(int id)
-        //{
-        //    var subCategory = _context.SubCategories.Find(id);
-        //    if (subCategory == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _context.SubCategories.Remove(subCategory);
-        //    _context.SaveChanges();
-        //    return NoContent();
-        //}
-
     }
 }

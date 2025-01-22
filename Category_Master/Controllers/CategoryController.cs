@@ -21,10 +21,6 @@ namespace Category_Master.Controllers
         {
             return await _context.Categories.ToListAsync();
         }
-        //public IActionResult GetCategories() 
-        //{
-        //  return Ok(_context.Categories.ToList());
-        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<CategoryMst>> GetCategoryById(int id)
@@ -37,15 +33,6 @@ namespace Category_Master.Controllers
             }
             return category;
         }
-        //public IActionResult GetCategory(int id)
-        //{
-        //    var category = _context.Categories.Find(id);
-        //    if (category == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(category);
-        //}
 
         [HttpPost]
         public async Task<ActionResult<CategoryMst>> AddCategory(CategoryMst categoryMst)
@@ -55,12 +42,6 @@ namespace Category_Master.Controllers
             return Ok(categoryMst);
 
         }
-        //public IActionResult AddCategory(CategoryMst categoryMst) 
-        //{ 
-        //    _context.Categories.Add(categoryMst);
-        //    _context.SaveChanges();
-        //    return Ok(categoryMst);
-        //}
 
         [HttpPut]
         public async Task<ActionResult> UpdateCategory(int id, CategoryMst categoryMst)
@@ -74,17 +55,6 @@ namespace Category_Master.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        //public IActionResult UpdateCategory(int id, CategoryMst categoryMst)
-        //{
-        //    if (id != categoryMst.Id)
-        //    { 
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(categoryMst).State = EntityState.Modified;
-        //    _context.SaveChanges();
-        //    return NoContent();
-        //}
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
@@ -99,17 +69,5 @@ namespace Category_Master.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        //public IActionResult DeleteCategory(int id)
-        //{
-        //    var category = _context.Categories.Find(id);
-        //    if(category == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _context.Categories.Remove(category);
-        //    _context.SaveChanges();
-        //    return NoContent();
-        //}
     }
 }
