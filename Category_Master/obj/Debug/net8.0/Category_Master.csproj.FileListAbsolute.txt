@@ -1,5 +1,6 @@
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\appsettings.json
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Category_Master.staticwebassets.runtime.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Category_Master.exe
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Category_Master.deps.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Category_Master.runtimeconfig.json
@@ -44,6 +45,10 @@ C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Mic
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Scrutor.dll
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -152,6 +157,7 @@ C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\Cat
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\Category_Master.csproj.CoreCompileInputs.cache
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\Category_Master.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\Category_Master.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\Category_Master.sourcelink.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Reyna\source\repos\Category_Master\Category_Master\obj\Debug\net8.0\staticwebassets\msbuild.Category_Master.Microsoft.AspNetCore.StaticWebAssets.props

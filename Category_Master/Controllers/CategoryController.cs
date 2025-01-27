@@ -1,4 +1,5 @@
-﻿using Category_Master.Data;
+﻿//using Category_Master.Data;
+using Category_Master.DTO;
 using Category_Master.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,21 +10,21 @@ namespace Category_Master.Controllers
     [Route("api/[controller]")]
     public class CategoryController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly CategoryDbContext _context;
 
-        public CategoryController(AppDbContext context)
+        public CategoryController(CategoryDbContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CategoryMst>>> GetCategories()
+        public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
             return await _context.Categories.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryMst>> GetCategoryById(int id)
+        public async Task<ActionResult<Category>> GetCategoryById(int id)
         {
             var category = await _context.Categories.FindAsync(id);
 
@@ -35,24 +36,31 @@ namespace Category_Master.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CategoryMst>> AddCategory(CategoryMst categoryMst)
+        public async Task<ActionResult<Category>> AddCategory(CategoryDto categoryDto)
         {
-            _context.Categories.Add(categoryMst);
-            await _context.SaveChangesAsync();
-            return Ok(categoryMst);
+            var categories = new Category
+            {
+                CategoryName = categoryDto.CategoryName,
+            };
 
+            _context.Categories.Add(categories);
+            await _context.SaveChangesAsync();
+            return Ok(categories);
         }
 
         [HttpPut]
-        public async Task<ActionResult> UpdateCategory(int id, CategoryMst categoryMst)
+        public async Task<ActionResult> UpdateCategory(int id, CategoryDto categoryDto)
         {
-            if (id != categoryMst.Id)
-            {
-                return BadRequest();
-            }
+            var categories = await _context.Categories.FindAsync(id);
 
-            _context.Entry(categoryMst).State = EntityState.Modified;
+            if (categories == null)
+                return NotFound("User not found.");
+
+            categories.CategoryName = categoryDto.CategoryName;
+
+            _context.Entry(categories).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
 
